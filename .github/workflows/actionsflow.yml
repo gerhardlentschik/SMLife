@@ -5,3 +5,19 @@ on:
     branches: [ main ]
   schedule:
     - cron: '0 */12 * * *'
+
+jobs:
+  start_scene:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Actionsflow
+        run: |
+          curl -sSL https://raw.githubusercontent.com/actionsflow/actionsflow/master/install.sh | bash
+
+      - name: Start Smart Live Scene
+        run: |
+          actionsflow run T1
