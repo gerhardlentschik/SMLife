@@ -3,8 +3,8 @@ name: Start Smart Live Scene
 on:
   push:
     branches: [ main ]
-  schedule:
-    - cron: '* * * * *'
+#  schedule:
+ #   - cron: '* * * * *'
 
 jobs:
   start_scene:
